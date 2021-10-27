@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-fpos5oyq4f7d9*0o&9tc+-(op*&4-kylup6&43p@3gx)(qnyu_
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["fznrsdtodo.herokuapp.com","127.0.0.1"]
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -79,11 +79,14 @@ WSGI_APPLICATION = 'todolist.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+#DATABASES = {
+   # 'default': {
+     #   'ENGINE': 'django.db.backends.sqlite3',
+     #   'NAME': BASE_DIR / 'db.sqlite3',
+   # }
+#}
+DATABASES={
+    'defalut':dj_database_url.config()
 }
 
 
@@ -123,7 +126,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
-STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
+#STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
 STATIC_URL = '/static/'
 
 # Default primary key field type
@@ -132,6 +135,5 @@ STATIC_URL = '/static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 #added
-STATICFILES_DIRS = [os.path.join(BASE_DIR,'static')
-]
+#STATICFILES_DIRS = [os.path.join(BASE_DIR,'static')]
 django_heroku.settings(locals())

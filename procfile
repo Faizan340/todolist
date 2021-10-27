@@ -1,1 +1,1 @@
-web: gunicorn fznrsdtodo.wsgi --log-file -
+web gunicorn todolist.wsgi:application --log-file -
