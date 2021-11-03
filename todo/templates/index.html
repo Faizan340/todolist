@@ -4,7 +4,7 @@
 <style>
  button 
     {
-    background-color:#4CAF50; /* Green */
+    background-color:#2e2020; /* Green */
     border: none;
     color: white;
     padding: 5px 3px;
@@ -12,15 +12,21 @@
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
+    border-radius: 12px;
+    }
+     button:hover{
+      color:black
     }
     body 
     {
-     background-color: cornsilk;
+     background-color: #5c5858;
     }
     input[type=text]
     {
       height:30px;
-      width:270px
+      width:270px;
+      box-sizing: border-box;
+      padding: 12px 10px;
     }
     .abc 
     {
@@ -29,11 +35,11 @@
 </style>
 </head>
 <body>
-<h1 style="border:5px Gray;color:black;">HELLO HUMAN</h1>
+<h1 style="border:5px Gray;color:black;font-family:Apple Chancery, cursive;">HELLO HUMAN</h1>
 
 
 <div id="myDIV" class="header">
-  <h2 style="margin:5px;"> To Do List WebApp</h2>
+  <h2 style="margin:5px;font-family:Apple Chancery, cursive;"> To Do List WebApp</h2>
   <form action="" method="POST">
     {% csrf_token %}
     <input  type="text" name="title" id="myInput" placeholder="Title">
@@ -45,7 +51,7 @@
 
 <ul class="abc" id="myUL">
   {% for todo in todos reversed %}
-  <li style = "font-size:30px">{{todo.title | title}} <span class="close"><a style="text-decoration: none; border:5px; color: DarkSlateGray;" href="delete/{{todo.id}}"><h6 >DELETE</h6></a></span></li>
+  <li style = "font-size:30px;font-family:Apple Chancery, cursive;">{{todo.title | title}} <span class="close"><a style="text-decoration: none; border:5px; color: DarkSlateGray;" href="delete/{{todo.id}}"><h6 >DELETE</h6></a></span></li>
   {% endfor %}
 </ul>
 </body>
