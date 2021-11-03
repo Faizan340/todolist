@@ -51,7 +51,7 @@
 
 <ul class="abc" id="myUL">
   {% for todo in todos reversed %}
-  <li style = "font-size:30px;font-family:Apple Chancery, cursive;">{{todo.title | title}} <span class="close"><a style="text-decoration: none; border:5px; color: DarkSlateGray;" href="delete/{{todo.id}}"><h6 >DELETE</h6></a></span></li>
+  <li style = "font-size:30px;font-family:Apple Chancery, cursive;">{{todo.title | title}} <span class="close"><a style="text-decoration: none; border:5px; color: #403c3c;" href="delete/{{todo.id}}"><h6 >DELETE</h6></a></span></li>
   {% endfor %}
 </ul>
 </body>
